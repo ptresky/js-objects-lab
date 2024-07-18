@@ -122,7 +122,11 @@ Exercise 9
 Solve Exercise 9 here:
 */
 pokemon.forEach(pokemon => {
-    if (starter = true) {
+    if (pokemon.starter === true) {
         console.log(pokemon.name)
     }
 })
+
+// = this is the assignment operator
+// == loose equality operator only cares about values not types
+// === strict equality operator matches value and type
