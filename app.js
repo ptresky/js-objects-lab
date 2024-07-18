@@ -216,6 +216,20 @@ const gymTally = {
   completed: 0,
   incomplete: 0,
 }
+game.gymStatus = function() {
+  game.gyms.forEach((gym) => {
+    console.log(gym, "here are my gyms")
+    // if gym complete is true 
+    // add 1 to gym tally completed
+    // else add 1 to gym tally incomplete
+    if (gym.completed === true) {
+      gymTally.completed += 1
+    } else {
+      gymTally.incomplete += 1
+    }
+  })
+}
+game.gymStatus()
 
 // game.gymStatus = gym.completed => {
 //   if (gyms.completed === true);
@@ -224,7 +238,7 @@ const gymTally = {
 
 // }
 
-// console.log(game.gymTally)
+console.log(gymTally, "game tally")
 
 /*
 Exercise 14
