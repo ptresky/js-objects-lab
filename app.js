@@ -149,4 +149,44 @@ game.catchPokemon = function(pokemonObj) {
     game.party.push(pokemonObj)
     }
 
-// console.log(game)
+console.log(game.catchPokemon(pokemon[99]))
+
+/*
+Exercise 11
+1. Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify it so that it also decreases the number of pokeballs in your inventory each time you catch a Pokémon.
+2. How will you find and update the quantity of pokeballs in the `game.items` array?
+
+Tips:
+For this exercise, it's okay to have a negative number of pokeballs.
+After updating the method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
+Also, log the `game.items` array to confirm that the pokeball quantity is being decremented.
+
+Solve Exercise 11 here:
+*/
+game.catchPokemon = function(pokemonObj) {
+    game.party.push(pokemonObj);
+    game.items[1].quantity -= 1
+    }
+
+console.log(game.catchPokemon(pokemon[1]))
+console.log(game.items)
+
+console.log(game.party)
+
+/*
+Exercise 12
+1. Similar to Exercise 6, now complete gyms with a difficulty below 6. How will you approach this?
+ (change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 12 here:
+*/
+
+
+game.gyms.forEach(gym => {
+    if (gym.difficulty < 6) {
+        gym.completed = true;
+    }
+})
+
+// console.log(game.gyms)
+
